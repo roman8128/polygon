@@ -7,9 +7,10 @@ import java.util.List;
 public record GroupedDaily(
         Boolean adjusted,
         Integer queryCount,
-        List<Result> resultList,
-        Integer resultCount,
-        String status
+        List<Result> results,
+        Integer resultsCount,
+        String status,
+        Integer requestId
 ) {
     public record Result(
          @JsonProperty("T") String ticker,
